@@ -1,0 +1,129 @@
+html{
+    font-size: 62.5%;
+}
+body{
+    display: grid;
+    grid-template-areas: "header  header "
+                         "main  main"
+                         "footer  footer";
+    grid-template-columns: repeat(2, 1fr);
+    background: url('../images/bg-desktop.svg') center center no-repeat;
+    background-size: cover;
+    background-color: hsl(257, 40%, 49%);  
+}
+
+.header{
+    grid-area: header;
+    padding: 5rem 8rem;
+}
+.main{
+    grid-area: main;
+    display: flex;
+    padding: 0 8rem;
+}
+.main .about{
+    padding: 0 0 0 8rem;
+}
+.main .about h1{
+    font-family: 'Poppins', sans-serif;
+    font-size: 4rem;
+    font-weight: 600;
+    color: #fff;
+}
+.main .about p{
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 400;
+    font-size: 1.7rem;
+    color: #fff;
+}
+.about a .button{
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+    font-size: 17px;
+    color: hsl(257, 40%, 49%);
+    margin-top: 2rem;
+    width: 20rem;
+    height: 6rem;
+    border-radius: 5rem;
+    border: solid 1px hsl(257, 40%, 49%);
+    box-shadow: 0.1em 0.1em  0.9em #252525;
+    cursor: pointer;
+    transition:0.3s;
+}
+.about a:hover .button{
+    color: #fff;
+    background-color: hsl(300, 69%, 71%);
+}
+.footer{
+    grid-area: footer;
+    text-align: end;
+    padding: 3rem 10rem;
+}
+.footer a i{
+    text-align: center;
+    color: #fff;
+    font-size: 18px;
+    padding: 10px;
+    border: solid 1px;
+    border-radius: 50px;
+    margin: 10px;
+    width: 18px;
+    transition: 0.3s;
+}
+.footer a:hover i{
+    color:hsl(300, 69%, 71%);
+}
+
+@media(max-width:768px){
+    body{
+        background: url('../images/bg-mobile.svg') center center no-repeat;
+        background-size: cover;
+        background-color: hsl(257, 40%, 49%);
+    }
+    .main{
+        display: grid;
+        grid-template-areas: "header"
+                             "main"
+                             "footer";   
+        padding: 4rem ;
+    }
+    .header{
+        padding: 4rem 6rem 0 6rem;
+    }
+    .header img{
+        width: 15rem;
+    }
+    .main{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .main .mockups img{
+        width: 30rem;
+    }
+    .main .about{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 0;
+    }
+    .main .about h1{
+        font-size: 3rem;
+        text-align: center;
+        margin: 0;
+    }
+    .main .about p{
+        padding: 0;
+        text-align: center;
+        margin: 0;
+    }
+    .about a .button{
+        width: 25rem;
+    }
+    .footer{
+        text-align: center;
+        padding: 1rem;
+    }
+    
+}
+
