@@ -1,0 +1,49 @@
+@media(max-width:768px){
+    body{
+        background: url('../images/bg-mobile.svg') center top no-repeat;
+        background-size: cover;
+        background-color: hsl(257, 40%, 49%);
+    }
+    .header{
+        padding: 3rem; 
+        
+    }
+    .header img{
+        width: 15rem;
+    }
+    .main{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 0;
+    }
+    .main .mockups img{
+        width: 30rem;
+        padding: 0;
+    }
+    .main .about{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 3rem;
+    }
+    .main .about h1{
+        font-size: 2.6rem;
+        text-align: center;
+    }
+    .main .about p{
+        text-align: center;
+    }
+    .about a .button{
+        width: 25rem;
+        height: 5rem;
+    }
+    .footer{
+        display: flex;
+        justify-self: center;
+        padding: 0;
+        margin-top: 2rem;
+    }
+    
+}

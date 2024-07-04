@@ -14,15 +14,20 @@ body{
 
 .header{
     grid-area: header;
-    padding: 5rem 8rem;
+    padding: 7rem;
+    display: flex;
+    align-items: center;
+    padding-left: 8rem;
 }
 .main{
     grid-area: main;
     display: flex;
-    padding: 0 8rem;
+    justify-content:space-between;
+    padding: 0 10rem;
 }
-.main .about{
-    padding: 0 0 0 8rem;
+
+.main .mockups img{
+    padding-right: 5rem;
 }
 .main .about h1{
     font-family: 'Poppins', sans-serif;
@@ -56,8 +61,13 @@ body{
 }
 .footer{
     grid-area: footer;
-    text-align: end;
     padding: 3rem 10rem;
+}
+.footer nav ul{
+    padding: 0;
+    list-style-type: none;
+    display: flex;
+    justify-content: end;
 }
 .footer a i{
     text-align: center;
@@ -74,56 +84,5 @@ body{
     color:hsl(300, 69%, 71%);
 }
 
-@media(max-width:768px){
-    body{
-        background: url('../images/bg-mobile.svg') center center no-repeat;
-        background-size: cover;
-        background-color: hsl(257, 40%, 49%);
-    }
-    .main{
-        display: grid;
-        grid-template-areas: "header"
-                             "main"
-                             "footer";   
-        padding: 4rem ;
-    }
-    .header{
-        padding: 4rem 6rem 0 6rem;
-    }
-    .header img{
-        width: 15rem;
-    }
-    .main{
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
-    .main .mockups img{
-        width: 30rem;
-    }
-    .main .about{
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        padding: 0;
-    }
-    .main .about h1{
-        font-size: 3rem;
-        text-align: center;
-        margin: 0;
-    }
-    .main .about p{
-        padding: 0;
-        text-align: center;
-        margin: 0;
-    }
-    .about a .button{
-        width: 25rem;
-    }
-    .footer{
-        text-align: center;
-        padding: 1rem;
-    }
-    
-}
+
 
